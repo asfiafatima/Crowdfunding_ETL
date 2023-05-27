@@ -50,6 +50,15 @@ FROM category;
 SELECT *
 FROM subcategory;
 
+SELECT ct.category,sb.subcategory,ca.company_name,ca.goal,ca.pledged
+FROM campaign as ca
+INNER JOIN category as ct
+ON ca.category_id=ct.category_id
+INNER JOIN subcategory as sb
+ON ca.subcategory_id=sb.subcategory_id
+WHERE ca.country='US' AND ca.outcome='failed'
+ORDER BY goal;
+
 
 
 
