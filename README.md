@@ -1,15 +1,17 @@
 # Crowdfunding_ETL
-#Data sources
+Data sources
+Crowdfunding.csv and contacts.csv
 
- Crowdfunding.csv and contacts.csv
-
-#Final production
- Database: PostgreSQL 
+Final production
+Database: PostgreSQL 
 
 # Description 
-Using crowdfunding.csv we're creating category_id and sub_category_id for each category name.
+Extract, Transform and Load
+Using crowdfunding.csv, we created category_id and sub_category_id for each category name.
 We created a dataframe using Json dictionary to create first_name and last_name from column name.
-We used Regex to extract names,ids,emails. 
+Dropped columns that no longer was needed.
+We used Regex to extract names,ids,emails from the text.
+Analysis:
 There are 435 companies have achieved their goals
 We performed query to acquire details like first,last name and company name using join method based on contact_ids.
 We wanted to do analysis on companies based on US
